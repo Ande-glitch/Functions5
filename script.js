@@ -48,8 +48,10 @@ function ranDom() {
     let ment = parseInt(prompt("Skriv et tall"))
     let environ = parseInt(prompt("Skriv et tall"))
 
-    var results = (ment, environ)
-    var generate = parseInt(Math.random()*results)
+    const max = Math.max(ment, environ)
+    const min = Math.min(ment, environ)
+
+    let generate = Math.trunc(Math.random() * (max - min) + min)
     console.log(generate);
 }
 
